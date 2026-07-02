@@ -4,7 +4,7 @@ import FabricsClient from "./FabricsClient";
 export const dynamic = "force-dynamic";
 
 interface Fabric {
-  _id: string;
+  id: string;
   name: string;
   title: string;
   category: string;
