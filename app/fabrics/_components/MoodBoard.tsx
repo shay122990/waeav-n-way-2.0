@@ -2,12 +2,7 @@
 
 import Image from "next/image";
 import { useMemo } from "react";
-
-interface Fabric {
-  id: string;
-  name: string;
-  image?: string;
-}
+import type { Fabric } from "../../types/fabric";
 
 interface MoodBoardProps {
   fabrics: Fabric[];

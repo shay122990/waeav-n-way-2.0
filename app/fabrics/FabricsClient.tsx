@@ -7,15 +7,7 @@ import { useRouter, useSearchParams } from "next/navigation";
 import FabricCard from "./_components/FabricCard";
 import MoodBoard from "./_components/MoodBoard";
 
-interface Fabric {
-  id: string;
-  name: string;
-  title: string;
-  category: string;
-  description: string;
-  image?: string;
-  color?: string;
-}
+import type { Fabric } from "../types/fabric";
 
 const ITEMS_PER_PAGE = 10;
 
@@ -83,7 +75,7 @@ export default function FabricsClient({ fabrics }: { fabrics: Fabric[] }) {
 
   return (
     <>
-      <div className="relative h-[400px] w-full md:h-[600px]">
+      <div className="relative h-100 w-full md:h-150">
         <Image
           src="/fabrics.jpg"
           alt="hero image of fabric"
@@ -161,7 +153,7 @@ export default function FabricsClient({ fabrics }: { fabrics: Fabric[] }) {
       </div>
 
       <div className="flex flex-col bg-white text-black md:flex-row">
-        <aside className="hidden shrink-0 self-stretch border-r border-gray-300 bg-gradient-to-b from-[#f5f7fa] to-[#c3cfe2]/50 shadow-inner md:block md:w-72 lg:w-80">
+        <aside className="hidden shrink-0 self-stretch border-r border-gray-300 bg-linear-to-b from-[#f5f7fa] to-[#c3cfe2]/50 shadow-inner md:block md:w-72 lg:w-80">
           <div className="sticky top-0 p-6">
             <div className="mb-6">
               <MoodBoard fabrics={fabrics} />

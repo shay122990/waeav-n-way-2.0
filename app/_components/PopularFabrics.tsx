@@ -23,7 +23,7 @@ export default function PopularFabrics() {
           {popularCategories.map((category) => (
             <div
               key={category.id}
-              className="flex-shrink-0 w-100 bg-white text-black p-4"
+              className="shrink-0 w-100 bg-white text-black p-4"
             >
               <Image
                 src={category.image}

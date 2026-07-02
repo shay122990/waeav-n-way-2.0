@@ -1,12 +1,4 @@
-interface Fabric {
-  id: string;
-  name: string;
-  title: string;
-  category: string;
-  description: string;
-  image?: string;
-  color?: string;
-}
+import type { Fabric } from "../../types/fabric";
 
 interface FabricItemProps {
   fabric: Fabric;

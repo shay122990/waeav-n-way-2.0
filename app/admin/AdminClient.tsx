@@ -5,16 +5,7 @@ import { useRouter } from "next/navigation";
 import FabricList from "./_components/FabricList";
 import AdminHeader from "./_components/AdminHeader";
 import FabricForm from "./_components/FabricForm";
-
-interface Fabric {
-  id: string;
-  name: string;
-  title: string;
-  category: string;
-  description: string;
-  image?: string;
-  color?: string;
-}
+import type { Fabric } from "../types/fabric";
 
 type FabricForm = Omit<Fabric, "id">;
 

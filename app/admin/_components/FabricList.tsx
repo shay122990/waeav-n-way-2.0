@@ -1,15 +1,7 @@
 import Search from "./Search";
 import FabricItem from "./FabricItem";
 
-interface Fabric {
-  id: string;
-  name: string;
-  title: string;
-  category: string;
-  description: string;
-  image?: string;
-  color?: string;
-}
+import type { Fabric } from "../../types/fabric";
 
 interface FabricListProps {
   fabrics: Fabric[];

@@ -3,15 +3,7 @@ import FabricsClient from "./FabricsClient";
 
 export const dynamic = "force-dynamic";
 
-interface Fabric {
-  id: string;
-  name: string;
-  title: string;
-  category: string;
-  description: string;
-  image?: string;
-  color?: string;
-}
+import type { Fabric } from "../types/fabric";
 
 async function getFabrics(): Promise<Fabric[]> {
   const headersList = await headers();

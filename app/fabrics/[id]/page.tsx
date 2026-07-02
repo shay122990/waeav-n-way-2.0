@@ -3,18 +3,9 @@ import { headers } from "next/headers";
 import Link from "next/link";
 
 import FabricZoomImage from "../_components/FabricZoomImage";
+import type { Fabric } from "../../types/fabric";
 
 export const dynamic = "force-dynamic";
-
-interface Fabric {
-  id: string;
-  name: string;
-  title: string;
-  category: string;
-  description: string;
-  image?: string;
-  color?: string;
-}
 
 async function getFabric(id: string): Promise<Fabric | null> {
   const headersList = await headers();
